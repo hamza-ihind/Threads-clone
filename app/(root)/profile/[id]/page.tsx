@@ -2,6 +2,7 @@ import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { fetchUser } from "@/lib/actions/user.actions";
 import ProfileHeader from "@/components/shared/ProfileHeader";
+import ThreadsTab from "@/components/shared/ThreadsTab";
 
 import { Tabs, TabsTrigger, TabsContent, TabsList } from "@/components/ui/tabs";
 import { profileTabs } from "@/constants";
@@ -16,6 +17,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
   return (
     <section className="text-white">
       <ProfileHeader
+        imgUrl={user.imageUrl}
         accountId={userInfo.id}
         authUserId={user.id}
         name={userInfo.name}
