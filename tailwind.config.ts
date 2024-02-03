@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      inter: ["Inter", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "2rem",
